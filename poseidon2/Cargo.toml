@@ -1,0 +1,30 @@
+[package]
+name = "poseidon2"
+version = "0.1.0"
+authors = ["ak36 <ak10495@nyu.edu>"]
+description = "Rust and Halo2 implementations of Poseidon2"
+edition = "2021"
+
+[dependencies]
+ff.workspace = true
+halo2_proofs.workspace = true
+thiserror.workspace = true
+log.workspace = true
+rand_xorshift.workspace = true
+rand.workspace = true
+lazy_static.workspace = true
+bitvec.workspace = true
+halo2curves.workspace = true
+hex = "0.4"
+num-bigint = "0.4"
+num-traits = "0.2"
+
+[dev-dependencies]
+bencher.workspace = true
+lazy_static.workspace = true
+rand.workspace = true
+rand_chacha.workspace = true
+subtle.workspace = true
+
+[features]
+default = ["halo2_proofs/parallel_syn"]
